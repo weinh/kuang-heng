@@ -25,8 +25,8 @@ public class OOM {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Byte b[] = dumpOOM(10);
-        b = null;
+//        Byte b[] = dumpOOM(10);
+//        b = null;
         stackOverFlowError();
     }
 
