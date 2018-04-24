@@ -2,6 +2,8 @@ package jvm;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.management.ClassLoadingMXBean;
+import java.lang.management.ManagementFactory;
 
 /**
  * 类 名 称：LoaderClass.java
@@ -30,7 +32,7 @@ public class LoaderClass {
         System.out.println(object instanceof LoaderClass);
     }
 
-    static class MyClassLoader extends ClassLoader {
+    public static class MyClassLoader extends ClassLoader {
         @Override
         public Class<?> loadClass(String name) throws ClassNotFoundException {
             try {

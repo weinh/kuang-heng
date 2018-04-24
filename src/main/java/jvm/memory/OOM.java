@@ -11,21 +11,24 @@ public class OOM {
     private static int size = 1024 * 1024;
 
     /**
-     * -Xmx5m
+     * 设置最大堆内存为5M，-Xmx5m，程序分配10M内存
      *
      * @param count 几兆
      * @return
      */
-    private static Byte[] dumpOOM(int count) {
+    private static Byte[] heapOOM(int count) {
         Byte b[] = new Byte[size * count];
         return b;
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Byte b[] = dumpOOM(10);
+        Byte b[] = heapOOM(10);
 //        stackOverFlowError();
     }
 
+    /**
+     * 栈移除
+     */
     private static void stackOverFlowError() {
         try {
             stackOverFlowError();
