@@ -1,13 +1,10 @@
 package jvm.gc;
 
 /**
- * <p>类名称：ReferenceCountingGC
- * <p>描述说明：
- * <p>作者单位：恒生芸擎网络有限公司
- * <p>版本号：2.0.0.0
- *
- * @author weinh
- * @date 2018-04-26 19:55
+ * 类 名 称：ReferenceCountingGC.java
+ * 功能说明：循环引用计数法GC回收情况
+ * 开发人员：weinh
+ * 开发时间：2018年04月24日
  */
 public class ReferenceCountingGC {
     private byte b[] = new byte[1024 * 1024 * 2];
