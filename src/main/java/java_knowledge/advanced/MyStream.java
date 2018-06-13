@@ -1,6 +1,10 @@
 package java_knowledge.advanced;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -22,5 +26,12 @@ public class MyStream {
                 maxLength = Math.max(length, maxLength);
             }
         }
+        // 错误的收集方式
+        ArrayList<String> s1 = new ArrayList<>();
+        Arrays.stream(strings).filter(s -> s.startsWith("a"))
+                .forEach(s1::add);
+        // 正确的收集方式
+        List<String> s2 = Arrays.stream(strings).filter(s -> s.startsWith("a"))
+                .collect(Collectors.toList());
     }
 }
