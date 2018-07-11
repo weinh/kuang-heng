@@ -28,10 +28,10 @@ public class MyStream {
         }
         // 错误的收集方式
         ArrayList<String> s1 = new ArrayList<>();
-        Arrays.stream(strings).filter(s -> s.startsWith("a"))
+        Arrays.stream(strings).filter(s -> s.startsWith("a")).parallel()
                 .forEach(s1::add);
         // 正确的收集方式
-        List<String> s2 = Arrays.stream(strings).filter(s -> s.startsWith("a"))
+        List<String> s2 = Arrays.stream(strings).filter(s -> s.startsWith("a")).parallel()
                 .collect(Collectors.toList());
     }
 }
