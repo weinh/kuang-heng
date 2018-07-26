@@ -21,7 +21,7 @@ public class JstackOut {
     public static void main(String[] args) {
 //        singleThread();
 //        threadPool();
-//        new JstackOut().deadlock();
+        new JstackOut().deadlock();
         while (true) ;
     }
 
